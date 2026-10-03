@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-farm-primary: #2E5E3E;
+  --color-farm-primary-hover: #244B32;
+  --color-farm-primary-light: #EAF2EC;
+  --color-farm-sand: #FAF8F5;
+  --color-farm-sand-card: #FFFFFF;
+  --color-farm-sand-muted: #F4EFE6;
+  --color-farm-sand-border: #E4DDD0;
+  --color-farm-text: #1C2B20;
+  --color-farm-muted: #526356;
+  --color-farm-caution: #D97706;
+  --color-farm-caution-light: #FEF3C7;
+  --color-farm-risk: #DC2626;
+  --color-farm-risk-light: #FEE2E2;
+  --color-farm-safe: #15803D;
+  --color-farm-safe-light: #DCFCE7;
+  --font-sans: 'Inter', 'Noto Sans Bengali', system-ui, sans-serif;
+  --font-bengali: 'Noto Sans Bengali', 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  font-family: 'Inter', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+
+[lang="bn"] {
+  font-family: 'Noto Sans Bengali', 'Inter', system-ui, sans-serif;
+}
+
+/* Accessible focus visible rings */
+:focus-visible {
+  outline: 2px solid #2E5E3E;
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print Stylesheet: Print ONLY the village card on a single clean page */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+    margin: 0;
+    padding: 0;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .village-card-print {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 1.5cm !important;
+    box-shadow: none !important;
+    border: 2px solid #2E5E3E !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 1cm;
+  }
+}
+
+@media screen {
+  .print-only {
+    display: none;
+  }
+}

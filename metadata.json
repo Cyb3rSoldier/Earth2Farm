@@ -1,0 +1,6 @@
+{
+  "name": "Earth2Farm - NASA Planting Window Advisory",
+  "description": "Planting-window advisory for Bangladeshi rice farmers adapting to climate shifts using NASA satellite data.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
